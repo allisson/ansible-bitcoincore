@@ -1,0 +1,33 @@
+# reference https://raspibolt.org/guide/bitcoin/bitcoin-client.html#configuration
+
+# Bitcoin daemon
+server=1
+txindex=1
+
+# Network
+listen=1
+bind=127.0.0.1
+
+{% if enable_tor %}
+# Tor
+listenonion=1
+proxy=127.0.0.1:9050
+{% endif %}
+
+# Connections
+{{ rpcauth.stdout_lines[1] }}
+zmqpubrawblock=tcp://127.0.0.1:28332
+zmqpubrawtx=tcp://127.0.0.1:28333
+whitelist=download@127.0.0.1 # for Electrs
+
+{% if optimize_for_raspberrypi %}
+# Raspberry Pi optimizations
+maxconnections=40
+maxuploadtarget=5000
+{% endif %}
+
+{% if optimize_for_initial_block_download %}
+# Initial block download optimizations
+dbcache=2000
+blocksonly=1
+{% endif %}
