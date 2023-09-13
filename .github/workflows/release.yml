@@ -1,0 +1,17 @@
+name: Execute release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: simple
+          package-name: ansible-bitcoincore

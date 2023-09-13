@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Allisson Azevedo
+  description: Installs bitcoin core using https://raspibolt.org/ as a reference
+  license: MIT
+  min_ansible_version: "2.1"
+  platforms:
+    - name: Debian
+      versions:
+        - bookworm
+        - bullseye
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+  galaxy_tags:
+    - bitcoin
+    - tor
+    - raspberrypi

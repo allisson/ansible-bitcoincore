@@ -1,0 +1,20 @@
+---
+# defaults file for ansible-bitcoincore
+version: "25.0"
+bitcoin_user: bitcoin
+bitcoin_group: bitcoin
+bitcoin_uid: 2000
+bitcoin_gid: 2000
+rpc_user: bitcoin
+rpc_password: bitcoin
+enable_tor: true
+optimize_for_raspberrypi: false
+optimize_for_initial_block_download: false
+base_download_url: "https://bitcoincore.org/bin/bitcoin-core-{{ version }}/bitcoin-{{ version }}"
+download_url:
+  amd64: "{{ base_download_url }}-x86_64-linux-gnu.tar.gz"
+  arm64: "{{ base_download_url }}-aarch64-linux-gnu.tar.gz"
+  armhf: "{{ base_download_url }}-arm-linux-gnueabihf.tar.gz"
+  riscv64: "{{ base_download_url }}-riscv64-linux-gnu.tar.gz"
+  PPC64: "{{ base_download_url }}-powerpc64-linux-gnu.tar.gz"
+  ppc64el: "{{ base_download_url }}-powerpc64le-linux-gnu.tar.gz"
