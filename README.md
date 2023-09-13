@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Installs bitcoin core using https://raspibolt.org/ as a reference.
 
 Role Variables
 --------------
