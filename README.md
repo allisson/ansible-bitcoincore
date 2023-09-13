@@ -1,7 +1,11 @@
-Role Name
+allisson.ansible_bitcoincore
 =========
 
 Installs bitcoin core using https://raspibolt.org/ as a reference.
+
+```bash
+ansible-galaxy install allisson.ansible_bitcoincore
+```
 
 Role Variables
 --------------
