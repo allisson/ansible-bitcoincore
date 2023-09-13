@@ -18,7 +18,7 @@ Example Playbook
   become: yes
 
   roles:
-    - role: allisson.bitcoincore
+    - role: allisson.ansible_bitcoincore
       vars:
         version: "25.0"
         bitcoin_user: bitcoin
